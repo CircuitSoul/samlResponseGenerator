@@ -138,3 +138,16 @@ $ git clone https://github.com/FroydCod3r/samlResponseGenerator.git
 $ cd samlResponseGenerator
 $ mvn package
 ```
+
+Commum build errors
+------
+```
+Error:
+[ERROR] error: Source option 5 is no longer supported. Use 6 or later.
+[ERROR] error: Target option 1.5 is no longer supported. Use 1.6 or later.
+
+Fix:
+Install Java Extension Pack of Visual Studio Code
+```
+
+![image](https://user-images.githubusercontent.com/9803476/120085958-944d4f80-c0aa-11eb-8ce0-f47266fa3aed.png)
