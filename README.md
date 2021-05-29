@@ -123,13 +123,18 @@ $ sudo ln -s /opt/apache-maven-3.8.1/bin/mvn /usr/local/bin
 check the version:
 ```
 $ mvn -version
-```
-output:
-```
 Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
 Apache Maven 3.8.1 (05c21c65bdfed0f71a2f2ada8b84da59348c4c5d)
 Maven home: /opt/apache-maven-3.8.1
 Java version: 11.0.11-ea, vendor: Debian, runtime: /usr/lib/jvm/java-11-openjdk-amd64
 Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "5.10.0-kali7-amd64", arch: "amd64", family: "unix"
+```
+
+Compiling the jar file
+-------
+```
+$ git clone https://github.com/FroydCod3r/samlResponseGenerator.git
+$ cd samlResponseGenerator
+$ mvn package
 ```
