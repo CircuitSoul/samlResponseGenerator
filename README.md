@@ -1,5 +1,5 @@
 SAML Response Generator
-=======================
+=============================================
 
 This is a small utility program that makes it easy to generate SAML responses for testing.
 
@@ -15,15 +15,19 @@ openssl req -new -x509 -days 3652 -nodes -out saml.crt -keyout saml.pem
 openssl pkcs8 -topk8 -inform PEM -outform DER -in saml.pem -out saml.pkcs8 -nocrypt
 ```
 
-Command line tool
------------------
-
-You will need to create the jar file in order to use the command line tool. cd to saml-tutorial then run 'mvn package' to create a jar file called 'saml-generator-1.0.jar'. This jar file will be used to create saml assertions.
+Compiling the jar file
+--------------------------------------------
+```
+$ git clone https://github.com/FroydCod3r/samlResponseGenerator.git
+$ cd samlResponseGenerator
+$ mvn package
+```
 
 Usage
------
-
+--------------------------------------------
+```
 java -jar saml-generator-1.0.jar [-domain <arg>] [-issuer <arg>] [-privateKey <arg>] [-publicKey <arg>] [-roles <arg>] [-email <arg>] [-samlAssertionExpirationDays <arg>] [-subject <arg>]
+```
 
 ```
 -issuer
@@ -52,9 +56,10 @@ How long before the assertion is no longer valid
 ```
 
 Example
--------
-
-java -jar saml-generator-1.0.jar -domain 7719 -issuer 'http://some.compnay.com' -privateKey saml.pkcs8 -publicKey saml.crt -roles 'role1' -samlAssertionExpirationDays 5 -subject samlUser1
+--------------------------------------------
+```
+java -jar saml-generator-1.0.jar -domain 7719 -issuer 'http://company.com' -privateKey saml.pkcs8 -publicKey saml.crt -roles 'role1' -samlAssertionExpirationDays 5 -subject samlUser1
+```
 
 Output:
 ```
@@ -106,7 +111,7 @@ Output:
 </saml2p:Response>
 ```
 Install Maven on Kali Linux
--------
+--------------------------------------------
 
 Download Binary Apache Maven on: https://maven.apache.org/download.cgi
 
@@ -131,16 +136,8 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "5.10.0-kali7-amd64", arch: "amd64", family: "unix"
 ```
 
-Compiling the jar file
--------
-```
-$ git clone https://github.com/FroydCod3r/samlResponseGenerator.git
-$ cd samlResponseGenerator
-$ mvn package
-```
-
 Commum build errors
-------
+--------------------------------------------
 ```
 Error:
 [ERROR] error: Source option 5 is no longer supported. Use 6 or later.
